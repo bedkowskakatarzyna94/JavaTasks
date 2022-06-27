@@ -5,6 +5,8 @@ class BankAccount {
         balance = openingBalance;
     }
 
+
+
     public void deposit(double amount) {
         balance = balance + amount;
     }
