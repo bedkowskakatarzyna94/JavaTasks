@@ -86,33 +86,33 @@ class OrdArray {
 
         OrdArray mergedArr = new OrdArray(this.size() + inputArray.size());
         int thisIndex = 0;
-        int inputIndex = 0;
-        int targetIndex = 0;
+        int inputArrIndex = 0;
+        int mergedArrIndex = 0;
 
-        while (thisIndex < this.size() && inputIndex < inputArray.size()) {
-            if (this.a[thisIndex] > inputArray.a[inputIndex]) {
-                mergedArr.a[targetIndex] = inputArray.a[inputIndex];
-                inputIndex++;
+        while (thisIndex < this.size() && inputArrIndex < inputArray.size()) {
+            if (this.a[thisIndex] > inputArray.a[inputArrIndex]) {
+                mergedArr.a[mergedArrIndex] = inputArray.a[inputArrIndex];
+                inputArrIndex++;
             } else {
-                mergedArr.a[targetIndex] = this.a[thisIndex];
+                mergedArr.a[mergedArrIndex] = this.a[thisIndex];
                 thisIndex++;
             }
-            targetIndex++;
+            mergedArrIndex++;
         }
         if (thisIndex == this.size()) {
-            while (inputIndex < inputArray.size()) {
-                mergedArr.a[targetIndex] = inputArray.a[inputIndex];
-                inputIndex++;
-                targetIndex++;
+            while (inputArrIndex < inputArray.size()) {
+                mergedArr.a[mergedArrIndex] = inputArray.a[inputArrIndex];
+                inputArrIndex++;
+                mergedArrIndex++;
             }
         } else {
             while (thisIndex < this.size()) {
-                mergedArr.a[targetIndex] = this.a[thisIndex];
+                mergedArr.a[mergedArrIndex] = this.a[thisIndex];
                 thisIndex++;
-                targetIndex++;
+                mergedArrIndex++;
             }
         }
-        mergedArr.nElems = targetIndex;
+        mergedArr.nElems = mergedArrIndex;
         return mergedArr;
     }
 }
