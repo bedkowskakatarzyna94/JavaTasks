@@ -1,3 +1,5 @@
+package Sorting;
+
 class ArrayIns {
     private long[] a;
     private int nElems;

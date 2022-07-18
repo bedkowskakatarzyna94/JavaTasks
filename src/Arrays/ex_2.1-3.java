@@ -1,5 +1,7 @@
+package Arrays;
+
 class HighArray {
-    private long[] a;
+    private final long[] a;
     private int nElems;
 
     public HighArray(int max) {
@@ -74,6 +76,7 @@ class HighArray {
         }
     }
 }
+
 
 class HighArrayApp {
     public static void main(String[] args) {
